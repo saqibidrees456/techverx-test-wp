@@ -1,0 +1,97 @@
+input[type=text],
+input[type=search],
+input[type=email],
+input[type=number],
+input[type=tel],
+input[type=url],
+textarea,
+select {
+  background: transparent;
+  padding: 16px 14px;
+  font-size: 14px;
+  color: #fff;
+  border: 1px solid #CDCDCD;
+  border-radius: 0;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+textarea {
+  resize: none;
+  height: 200px;
+  border-radius: 0px;
+}
+textarea::placeholder {
+  font-size: 14px;
+  color: #ffffffa8;
+  font-family: Roboto;
+}
+textarea:focus {
+  box-shadow: 0 0 5px rgba(0, 52, 132, 0.38);
+}
+
+.tnp-subscription.tnp-subscription input[type=text] {
+  background: #F6F6F6;
+  padding: 15px;
+  border-radius: 3px;
+  font-size: 14px;
+  color: #444;
+  border: 0px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.tnp-subscription input[type=email] {
+  background: #F6F6F6;
+  padding: 15px;
+  border-radius: 3px;
+  font-size: 14px;
+  color: #444;
+  border: 0px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+input::placeholder {
+  font-size: 14px;
+  color: #ffffffa8;
+  font-family: Roboto;
+}
+input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+input:focus {
+  box-shadow: 0 0 5px rgba(0, 52, 132, 0.38);
+}
+
+input.form-control::placeholder {
+  font-size: 14px;
+  color: #ffffffa8;
+  font-family: Roboto;
+}
+
+input[type=reset],
+input[type=submit] {
+  background-color: #01ACFA;
+  border-radius: 3px;
+  border: 1px solid #01ACFA;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  font-family: Roboto, sans-serif;
+  font-weight: 600;
+  padding: 18px 50px;
+  color: #fff;
+}
+input[type=reset]:hover,
+input[type=submit]:hover {
+  background-color: transparent;
+  color: #01ACFA;
+}

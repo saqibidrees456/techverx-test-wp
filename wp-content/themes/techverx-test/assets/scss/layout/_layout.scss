@@ -1,0 +1,206 @@
+//==============================================================================================================================
+// LAYOUT
+//----------------------------------------------------------------------------------------------
+// Provides structural definitions for the site's layout, such grids, dimensions, positioning,
+// z-indexes, margins, and padding.
+//----------------------------------------------------------------------------------------------
+// IMPORTANT: Skinning attributes such as font size, color, backgrounds, and gradients should
+// not be defined in layout; these should be handled elsewhere (e.g., /Base) to maintain
+// separation of concerns.
+//----------------------------------------------------------------------------------------------
+// NOTE: Since layout sections often map to exclusive parts of a page, it is acceptable to
+// use #ID selectors here (and ONLY here).
+//----------------------------------------------------------------------------------------------
+// NOTE: Layouts in this file should be migrated to individual files under /Layout and imported
+// if they get too long (say, over 10 selectors).
+//==============================================================================================
+
+//----------------------------------------------------------------------------------------------
+// IMPORTS
+//----------------------------------------------------------------------------------------------
+@import "grid";
+
+.hidden-lg-down {
+  @include breakpoint(991) {
+    display: none;
+  }
+}
+
+@include min-breakpoint(1601) {
+  .container-lg {
+    max-width: 1400px;
+  }
+}
+
+//----------------------------------------------------------------------------------------------
+// HEADER
+//----------------------------------------------------------------------------------------------
+.vd-header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  background-color: transparent;
+  transition: all ease-in 0.2s;
+
+  .navbar-brand {
+    padding: 0;
+    margin: 0;
+  }
+
+  .navbar-nav {
+    .nav-item {
+      a.nav-link {
+        font-size: 16px;
+        color: #fff;
+      }
+
+      a.nav-link.active {
+        color: #73D41F;
+      }
+    }
+
+    .logo {
+      width: 200px;
+    }
+  }
+}
+
+body.scrolled {
+  .vd-header {
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 10px 0 #0000001a;
+    box-shadow: 0 0 10px 0 #0000001a;
+
+    .header-btn-2 {
+      background-color: #73D41F;
+      color: #fff;
+      border-color: #6ecc1d;
+
+      &:hover {
+        background-color: #6ecc1d;
+        border-color: #6ecc1d;
+      }
+    }
+
+    .header-btn-1 {
+      border: 1px solid #146cd0;
+      background-color: #146cd0;
+      color: #fff;
+
+      &:hover {
+        background-color: #105db5;
+        border: 1px solid #105db5;
+      }
+    }
+
+    .navbar-nav {
+      .nav-item {
+        a.nav-link {
+          color: #73D41F;
+        }
+
+        a.nav-link.active {
+          color: #73D41F;
+        }
+      }
+    }
+  }
+}
+
+//----------------------------------------------------------------------------------------------
+// Banners section
+//----------------------------------------------------------------------------------------------
+.general-banner {
+  position: relative;
+  background-image: url('assets/images/banner_1.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+
+  @include breakpoint(1300) {
+    .banner-content {
+      h1 {
+        font-size: 42px;
+      }
+    }
+  }
+
+  @include breakpoint(767) {
+    .banner-content {
+      h1 {
+        font-size: 32px;
+      }
+    }
+  }
+}
+
+.home {
+  .general-banner {
+    height: 100vh;
+  }
+}
+
+
+
+//----------------------------------------------------------------------------------------------
+// Footer
+//----------------------------------------------------------------------------------------------
+.footer-section {
+  padding: 50px 0 0;
+
+  .footer-content {
+    margin-bottom: 25px;
+
+    .footer-widget {
+      padding: 0 18px;
+      text-align: left;
+
+      h5 {
+        font-size: 20px;
+        font-family: $font-family-semiBold;
+        color: #4A4A4A;
+      }
+
+      li {
+        margin-bottom: 10px;
+
+        a {
+          text-decoration: none;
+          color: #4a4a4a;
+          font-size: 16px;
+
+          &:hover {
+            color: $blue-color;
+          }
+        }
+      }
+    }
+  }
+
+  .copyright-text {
+    margin-top: 25px;
+    border-top: 1px solid #ddd;
+    padding: 15px 0 10px;
+
+    p {
+      font-size: 14px;
+      margin: 0;
+    }
+  }
+}
+
+.social-icons {
+  li {
+    margin-right: 15px;
+    margin-bottom: 0;
+
+    a {
+      img {
+        width: 25px;
+      }
+    }
+  }
+}

@@ -1,0 +1,126 @@
+//==============================================================================================
+// FORMS
+//----------------------------------------------------------------------------------------------
+// Defines global styles for form related elements, such as inputs.
+//----------------------------------------------------------------------------------------------
+// NOTE: Font styles should be defined in _typography.scss.
+//==============================================================================================
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+textarea,
+select {
+  background: transparent;
+  padding: 10px 15px;
+  font-size: 14px;
+  height: 45px;
+  color: #4A4A4A;
+  border: 1px solid #CDCDCD;
+  border-radius: 5px;
+  width: 100%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+textarea {
+  resize: none;
+  height: 175px;
+  border-radius: 0px;
+
+  &::placeholder {
+    font-size: 14px;
+    color: #4A4A4A;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+
+.tnp-subscription.tnp-subscription {
+  input[type=text] {
+    background: #F6F6F6;
+    padding: 15px;
+    border-radius: 3px;
+    font-size: 14px;
+    color: #444;
+    border: 0px;
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+}
+
+.tnp-subscription {
+  input[type=email] {
+    background: #F6F6F6;
+    padding: 15px;
+    border-radius: 3px;
+    font-size: 14px;
+    color: #444;
+    border: 0px;
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+}
+
+input {
+  &::placeholder {
+    font-size: 14px;
+    color: #4A4A4A;
+    font-family: $font-family-base;
+  }
+
+  &::-webkit-calendar-picker-indicator {
+    display: none;
+  }
+
+  &:focus {
+    box-shadow: none;
+    border-color: #1A8DE5;
+  }
+}
+
+input.form-control {
+  &::placeholder {
+    font-size: 14px;
+    color: #4A4A4A;
+    font-family: $font-family-base;
+  }
+
+  &:focus {
+    box-shadow: none;
+    border-color: #1A8DE5;
+  }
+}
+
+input[type=reset],
+input[type=submit] {
+  background-color: $bg-color;
+  border-radius: 0px;
+  border: 1px solid $bg-color;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  font-family: $font-family-base;
+  font-weight: 600;
+  padding: 10px 25px;
+  color: #fff;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #fff;
+    border: 1px solid #fff;
+    color: $text-color;
+  }
+}

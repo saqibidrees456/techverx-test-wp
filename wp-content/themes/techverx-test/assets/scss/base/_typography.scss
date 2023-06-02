@@ -1,0 +1,130 @@
+//==============================================================================================
+// TYPOGRAPHY
+//----------------------------------------------------------------------------------------------
+// Overrides type-related settings such as default fonts, headings, and common text-related
+// styles, such as .error.
+//----------------------------------------------------------------------------------------------
+// NOTE: Font imports should be placed in the _fonts.scss file.
+//==============================================================================================
+
+//----------------------------------------------------------------------------------------------
+// VARIABLES
+//----------------------------------------------------------------------------------------------
+
+//Font families
+$font-family-base : 'Roboto Regular';
+$font-family-light : 'Roboto Light';
+$font-family-bold : 'Roboto Bold';
+$font-family-semiBold : 'Roboto SemiBold';
+$font-family-Segoe-UI : 'Segoe UI';
+
+//Font sizes
+$font-size-base : 16px !default;
+$font-size-large : ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-small : ceil(($font-size-base * 0.85)) !default; // ~12px
+$font-size-h1 : 48px;
+$font-size-h2 : 36px;
+$font-size-h3 : 32px;
+$font-size-h4 : 28px;
+$font-size-h5 : 24px;
+$font-size-h6 : 20px;
+
+//Text positioning/padding
+$line-height-base : normal;
+$heading-margin-bottom : 1.5rem;
+
+//Weight
+$font-weight-base : 400 !default; // 'normal'
+$font-weight-bold : 700 !default; // 'bold'
+$font-weight-semibold : 600 !default;
+$font-weight-light : 300 !default;
+
+//Colors
+$text-color : #1D1D1D !default;
+$bg-color: #1A8DE5;
+$error-color : #ff0000 !default;
+$link-color : $error-color !default;
+$light-grey-color: #EBECED;
+$half-black-color : rgba(0, 0, 0, 0.5);
+$border-color : rgba(0, 0, 0, 0.04);
+$text-grey: #4B4B4B;
+//Misc.
+$font-smoothing : antialiased !default;
+$text-rendering : optimizeLegibility !default;
+
+//----------------------------------------------------------------------------------------------
+// DEFAULTS
+//----------------------------------------------------------------------------------------------
+
+body {
+  -webkit-font-smoothing: $font-smoothing;
+  text-rendering: $text-rendering;
+  color: $text-color;
+  font-weight: 300;
+  font-size: $font-size-base;
+  font-family: $font-family-base;
+}
+
+p {
+  font-size: $font-size-base;
+  line-height: 1.5em;
+  margin-bottom: 15px;
+  color: $text-color;
+  font-family: $font-family-base;
+}
+
+a {
+  color: $text-color;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $bg-color;
+    text-decoration: none;
+  }
+}
+
+//----------------------------------------------------------------------------------------------
+// HEADINGS
+//----------------------------------------------------------------------------------------------
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family-base;
+  font-weight: $font-weight-base;
+  margin-bottom: $heading-margin-bottom;
+  color: $text-color;
+  line-height: $line-height-base;
+}
+
+h1 {
+  font-size: $font-size-h1;
+}
+
+h2 {
+  font-size: $font-size-h2;
+  font-family: $font-family-bold;
+}
+
+h3 {
+  font-size: $font-size-h3;
+}
+
+h4 {
+  font-size: $font-size-h4;
+  font-family: $font-family-semiBold;
+}
+
+h5 {
+  font-size: $font-size-h5;
+  font-family: $font-family-semiBold;
+}
+
+h6 {
+  font-size: $font-size-h6;
+  font-family: $font-family-semiBold;
+}
